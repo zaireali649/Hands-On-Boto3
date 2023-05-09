@@ -14,6 +14,11 @@ for routeTable in response["RouteTables"]:
     for association in routeTable["Associations"]:
         if("SubnetId") in association:
             print(association["SubnetId"])
+            
+for routeTable in response["RouteTables"]:
+    for association in routeTable["Associations"]:
+        if("RouteTableAssociationId") in association:
+            print(association["RouteTableAssociationId"])
         
 for routeTable in response["RouteTables"]:
     for route in routeTable["Routes"]:
