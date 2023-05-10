@@ -1,8 +1,9 @@
 import boto3
 
-subnet_id = 'subnet-012345'
+subnet_id = "subnet-0bd7e74203e0f1a09"
 
-# Create EC2 client
 ec2 = boto3.client('ec2')
 
-ec2.delete_subnet(SubnetId=subnet_id)
+ec2.delete_subnet(
+    SubnetId=subnet_id,
+)

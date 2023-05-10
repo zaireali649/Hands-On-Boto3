@@ -1,9 +1,7 @@
 import boto3
 
-vpc_cidr_block = '12.0.0.0/16'
-
 ec2 = boto3.client('ec2')
 
-vpc = ec2.create_vpc(CidrBlock=vpc_cidr_block)
+vpc = ec2.create_vpc(CidrBlock='12.0.0.0/16')
 
-print('VPC ID:', vpc['Vpc']['VpcId'])
+print(vpc["Vpc"]["VpcId"])
